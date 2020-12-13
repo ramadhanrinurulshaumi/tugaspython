@@ -27,7 +27,7 @@ class Chef(Kasir):
     def kerja(self):
         print(self.nama,"mengolah makanan didapur resto")
 
-#Program Utama
+
 if __name__=="__main__":
 
         nurul = Chef("Nurul Shaumi Ramadhanti")
