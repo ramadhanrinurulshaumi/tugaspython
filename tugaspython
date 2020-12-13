@@ -1,0 +1,41 @@
+class Pegawai:
+    def __init__(self,nama,gaji=120000):
+        self.nama = nama
+        self.gaji = gaji
+    def tunjangan(self, persen):
+        self.gaji = self.gaji + (self.gaji * persen)
+    def kerja(self):
+        print(self.nama, "Pekerjaannya")
+    def __repr__(self):
+        return"<Pegawai : nama = %s, gaji=%s"%(self.nama,self.gaji)
+
+class Kasir(Pegawai):
+    def __init(self,nama):
+        Pegawai.__init__(self,nama,100000)
+    def kerja(self):
+        print(self.nama,"melayani transaksi customer")
+
+class Pelayan(Pegawai):
+    def __init__(self,nama):
+        Pegawai. __init__(self,nama, 50000)
+    def kerja(self):
+        print(self.nama, "melayani customer")
+
+class Chef(Kasir):
+    def __init__(self,nama):
+        Kasir. __init__(self,nama)
+    def kerja(self):
+        print(self.nama,"mengolah makanan didapur resto")
+
+#Program Utama
+if __name__=="__main__":
+
+        nurul = Chef("Nurul Shaumi Ramadhanti")
+        print(nurul)
+        nurul.kerja()
+        nurul.tunjangan(0.20)
+        print (nurul)
+        print
+        for kelas in Pegawai, Kasir, Pelayan, Chef:
+            objek = kelas(kelas. __name__)
+            objek.kerja()
